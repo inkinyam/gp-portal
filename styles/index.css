@@ -1,0 +1,10 @@
+/* основные настройки */
+@import url('./vendors/normalize.css');
+@import url('./vendors/fonts.css');
+@import url('./common/root.css');
+
+/* основные блоки, которые используются на каждой странице */
+@import url('./common/header.css');
+@import url('./common/footer.css');
+
+
