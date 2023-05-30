@@ -14,13 +14,14 @@
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./images/favicons/favicon-180x180.png">
 
   <link rel="stylesheet" href="./styles/index.css">
-  <link rel="stylesheet" href="./styles/pages/main.css">
+  <link rel="stylesheet" href="./styles/pages/main-page.css">
   <title>Портал - Главная</title>
 </head>
 <body class="page">  
   <!-- HEADER -->
   <header class="header">
-      <img src="./images/logo.svg" alt="Логотип Института" class="header__logo">
+    <div class="header__container">
+      <img src="./images/logo-black.svg" alt="Логотип Института" class="header__logo">
       <ul class="header__list">
         <li class="header__item active">
           <a href="#" class="header__link">Главная</a>
@@ -45,16 +46,152 @@
       <button class="header__search">
         <img src="./images/icons/search.svg" alt="Поиск">
       </button>
+    </div>
   </header>
 
   <!-- MAIN -->
   <main class="main">
+    <section class="popular">
+      популярное
+    </section>
 
+    <section class="tasks">
+      задачи
+    </section>
+
+    <section class="news-and-banners">
+      <section class="news">новости</section>
+      <section class="banners">баннеры</section>
+    </section>
+
+    
+    <section class="statement">
+      заявки
+    </section>
+
+    <section class="docs">
+      документы
+    </section>
+
+    <section class="birthdays">
+      дни рождения
+    </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
+    <div class="footer__container">
 
+      <img src="./images/logo-white.svg" alt="Логотип Института" class="footer__logo">
+
+      <div class="footer__columns">
+        <div class="footer__column">
+          <div class="footer__column-title"></div>
+          <div class="footer__column-body">
+            <p class="footer__column-text">
+              На портале Института Генплана Москвы собраны наиболее востребованные сервисы, которые помогут тратить минимум времени на формальности и сосредоточиться на своих основных задачах. 
+              Вопросы и предложения можете направлять на почту <a href="mailto:samiantov@genplanmos.ru">samiantov@genplanmos.ru</a> или <a href="mailto:pkarasev@genplanmos.ru">pkarasev@genplanmos.ru</a>
+            </p>
+  
+            <ul class="footer__social-list">
+              <li class="footer__social-item">
+                <a href="https://vk.com/genplanmos">
+                  <img src="./images/icons/vk.png" alt="VKontakte">
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a href="https://vk.com/genplanmos">
+                  <img src="./images/icons/telegram.png" alt="Telegramm">
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a href="#">
+                  <img src="./images/icons/rss.png" alt="RSS">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="footer__column">
+          <div class="footer__column-title">
+            <h4 class="footer__title">Заявки</h4>
+          </div>
+          <div class="footer__column-body">
+            <ul class="footer__links">
+              <li class="footer__links-item">
+                <a href="#">Заявка в техподдержку</a>
+              </li>
+              <li class="footer__links-item">
+                <a href="#">Заявка в АХО </a>
+              </li>
+              <li class="footer__links-item">
+                <a href="#">Заявка на пропуск</a>
+              </li>
+              <li class="footer__links-item">
+                <a href="#">Заявка на печать</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+            
+        <div class="footer__column">
+          <div class="footer__column-title">
+            <h4 class="footer__title">Документы</h4>
+          </div>
+          <div class="footer__column-body">
+            <ul class="footer__links">
+              <li class="footer__links-item">
+                <a href="#">Документы отдела кадров</a>
+              </li>
+              <li class="footer__links-item">
+                <a href="#">Правовые документы</a>
+              </li>
+              <li class="footer__links-item">
+                <a href="#">Распоряжения</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="footer__column">
+          <div class="footer__column-title">
+            <h4 class="footer__title">Сервисы</h4>
+          </div>
+          <div class="footer__column-body">
+            <ul class="footer__links">
+              <li class="footer__links-item">
+                <a href="#">Телефонный справочник</a>
+              </li>
+              <li class="footer__links-item">
+                <a href="#">Файлообменный сервер</a>
+              </li>
+              <li class="footer__links-item">
+                <a href="#">Почта @str.mos.ru</a>
+              </li>
+              <li class="footer__links-item">
+                <a href="#">Почта @genplan.ru</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer__footer">
+        <p class="footer__copyright">
+          2023. Институт Генплана Москвы
+        </p>
+  
+        <a href="https://genplanmos.ru/policypersonaldata/" class="footer__link">Политика конфиденциальности</a>
+      </div>
+
+    </div>
+
+    
+
+
+
+    
   </footer>
 </body>
 </html>

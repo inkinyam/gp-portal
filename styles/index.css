@@ -5,6 +5,7 @@
 
 /* основные блоки, которые используются на каждой странице */
 @import url('./common/header.css');
+@import url('./common/main.css');
 @import url('./common/footer.css');
 
 

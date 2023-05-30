@@ -22,17 +22,11 @@
 }
 
 @font-face {
-    font-family: 'Lora';
-    font-style:  italic;
-    font-weight: 500;
-    font-display: swap;
-    src: url("./fonts/Lora-Italic.WOFF") format("woff")
-}
-  
-@font-face {
-    font-family: 'Lora';
+    font-family: 'Circe';
     font-style:  normal;
-    font-weight: 400;
+    font-weight: 350;
     font-display: swap;
-    src: url("./fonts/Lora-Regular.WOFF") format("woff")
+    src: url("./fonts/Circe-Light.woff") format("woff"),
+         url("./fonts/Circe-Light.ttf") format("truetype"),
+         url("./fonts/circe_bold.svg") format("svg")
 }
