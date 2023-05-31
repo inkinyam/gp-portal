@@ -1,0 +1,132 @@
+.card {
+  text-decoration: none;
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  transition: background-color 0.3s ease-in-out;
+
+
+  .card__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 28px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .card__header * {
+    flex-shrink: 0;
+  }
+
+  .card__label {
+    color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 92px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    height: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    background-color: var(--primary-hover);
+    transition: background-color, color 0.3s ease-in-out;
+  }
+
+  .card__date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--secondary);
+    transition: color 0.3s ease-in-out;
+  }
+
+  .card__filler {
+    border-bottom: 1px solid var(--light-middle);
+    flex-shrink: 1;
+    margin: 0 8px;
+    width: 100%;
+    transition: border 0.3s ease-in-out;
+    
+  }
+
+  .card__title {
+    margin: 18px 0 27px;
+    transition: color 0.3s ease-in-out;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    display: -webkit-box;
+    display: -moz-box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+  }
+
+  .card__deadline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: auto;
+    color: var(--dark);
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+.card.overdue {
+  .card__deadline {
+    color: var(--error);
+  }
+}
+
+.tasks .card:hover {
+  .card__label {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  .card__title {
+    color: var(--primary);
+  }
+}
+
+.tasks .card:active {
+  background-color: var(--primary);
+
+  .card__label {
+    color: var(--dark);
+    background-color: #fff;
+  }
+
+  .card__title {
+    color: #fff;
+  }
+
+  .card__filler {
+    border-bottom: 1px solid #fff;
+  }
+
+  .card__date {
+    color: #fff;
+  }
+  .card__deadline {
+    color: #fff !important;
+  }
+}
+

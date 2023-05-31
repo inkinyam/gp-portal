@@ -1,11 +1,14 @@
-/* основные настройки */
+/* вендоры */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 @import url('./vendors/normalize.css');
 @import url('./vendors/fonts.css');
-@import url('./common/root.css');
 
-/* основные блоки, которые используются на каждой странице */
+
+/* основные настройки для блоков, которые используются на каждой странице */
+@import url('./common/root.css');
 @import url('./common/header.css');
 @import url('./common/main.css');
+@import url('./common/card.css');
 @import url('./common/footer.css');
 
 

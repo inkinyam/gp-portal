@@ -1,15 +1,212 @@
+.section-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  margin: 0 0 30px;
+}
+
+/*раздел ПОПУЛЯРНОЕ*/
 .popular {
   width: 100%;
-  height: 130px;
-  background-color: blanchedalmond;
+
+  .popular__header {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .popular__edit {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../../images/icons/edit.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px 0 0 10px; 
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .popular__edit:hover {
+    opacity: 0.5;
+  }
+  
+  .popular__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 60px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+  }
+  
+  .popular__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .popular__item a {
+    color: var(--dark);
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease-in-out
+  }
+  
+  .popular__item:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .popular__item:active {
+    background-color: var(--primary);
+  }
+  .popular__item:active a {
+    color: #fff;
+  }
 }
 
+
+/*раздел ВАЖНОЕ*/
+.important {
+  width: 100%;
+
+  .important__bunner {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 5px 200px 5px 40px;
+    align-items: center;
+    background-color: currentColor;
+    height: 100px;
+    border-radius: var(--radius);
+    transition: background-color 0.3s ease-in-out;
+    border: 2px solid currentColor;
+  }
+
+  .important__bunner:hover {
+    background-color: #fff;
+    
+   
+    .important__text {
+      visibility: hidden;
+      opacity: 0;
+      width: 0;
+    }
+
+    .important__subtext {
+      visibility: visible;
+      opacity: 1;
+      width: auto;
+    }
+  }
+
+  .important__subtext {
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    transition: visibility,opacity  0.3s ease-in-out;
+    color: var(--dark);
+
+    .title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      margin: 0 0 4px;
+    }
+
+    .subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      margin: 0;
+    }
+  }
+
+  .important__text {
+    color: rgb(255, 254, 254);
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility,opacity  0.3s ease-in-out; 
+  }
+
+  .important__photo {
+    max-height: 200%;
+    align-self: flex-start;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+    right: 0;
+    top: -10px;
+  }
+}
+
+/*раздел ЗАДАЧИ*/
 .tasks {
   width: 100%;
-  height: 240px;
-  background-color: rgb(233, 253, 220);
+
+  .tasks__list {
+    list-style: none;
+    margin: 0;
+    box-sizing: border-box;
+    margin-top: -50px;
+    padding: 50px 0 0 !important;
+    
+  }
+  .swiper-wrapper {
+    gap: 20px !important;
+  }
+  
+  .tasks__item {
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius);
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    margin: 0 10px 30px;
+    width: 100%;
+    height: 180px;
+  }
+
+
+ .swiper-button-prev {
+    top: 10px;
+    left: unset;
+    right:  70px;
+  
+    &::after {
+      content: url(../../assets/icons/arrow-left.svg); 
+    }
+  }
+  
+  
+  .swiper-button-next {
+    top: 10px;
+    right:  10px;
+  
+    &::after {
+      content: url(../../assets/icons/arrow-right.svg); 
+    }
+  }
+ 
 }
 
+
+/*раздел НОВОСТИ И БАННЕРЫ*/
 .news-and-banners {
   width: 100%;
   display: flex;
@@ -17,12 +214,14 @@
   column-gap: 60px;
 }
 
+/*раздел НОВОСТИ*/
 .news {
   width: 100%;
   height: 650px;
   background-color: rgb(197, 250, 192);
 }
 
+/*раздел БАННЕРЫ*/
 .banners {
   max-width: 607px;
   width: 100%;
@@ -30,18 +229,22 @@
   background-color: rgb(127, 229, 255);
 }
 
+/*раздел ЗАЯВКИ*/
 .statement {
   width: 100%;
   height: 190px;
   background-color: rgb(205, 228, 255);
 }
 
+
+/*раздел ДОКУМЕНТЫ*/
 .docs {
   width: 100%;
   height: 190px;
   background-color: rgb(214, 205, 255);
 }
 
+/*раздел ДНИ РОЖДЕНИЯ*/
 .birthdays {
   width: 100%;
   height: 320px;
