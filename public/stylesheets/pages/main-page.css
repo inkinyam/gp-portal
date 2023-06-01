@@ -10,6 +10,8 @@
 /*раздел ПОПУЛЯРНОЕ*/
 .popular {
   width: 100%; }
+  .popular .section-title {
+    margin-bottom: 24px; }
   .popular .popular__header {
     display: flex;
     flex-direction: row; }
