@@ -1,0 +1,18 @@
+/* вендоры */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.css');
+@import url('./stylesheets/vendors/normalize.css');
+@import url('./stylesheets/vendors/fonts.css');
+@import url('./stylesheets/vendors/fansy-custom.css');
+
+
+/* основные настройки для блоков, которые используются на каждой странице */
+@import url('./stylesheets/common/root.css');
+@import url('./stylesheets/common/header.css');
+@import url('./stylesheets/common/main.css');
+@import url('./stylesheets/common/card.css');
+@import url('./stylesheets/common/grey-cards.css');
+@import url('./stylesheets/common/tabs.css');
+@import url('./stylesheets/common/footer.css');
+
+

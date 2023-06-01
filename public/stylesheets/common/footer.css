@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/*основные цвета*/
+.footer {
+  width: 100%;
+  background-color: #0C5FBA;
+  box-sizing: border-box;
+  padding: 100px 0 54px;
+  color: #ffffff; }
+  .footer .footer__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1312px;
+    width: 90%;
+    margin: 0 auto; }
+  .footer .footer__logo {
+    width: 101.5px;
+    height: 50px;
+    margin-bottom: 4px; }
+  .footer .footer__columns {
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid #E6F1FC; }
+  .footer .footer__column {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px; }
+    .footer .footer__column:first-of-type {
+      max-width: 426px;
+      margin-right: auto; }
+  .footer .footer__column-title {
+    min-height: 60px; }
+  .footer .footer__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px; }
+  .footer .footer__column-text {
+    font-style: normal;
+    font-weight: 350;
+    font-size: 18px;
+    line-height: 24px; }
+    .footer .footer__column-text a {
+      transition-property: opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      cursor: url(../../../images/icons/Cursor-hand.svg), pointer;
+      text-decoration: none;
+      color: inherit;
+      font-weight: 400; }
+      .footer .footer__column-text a:hover {
+        opacity: 0.5; }
+  .footer .footer__social-list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 0; }
+  .footer .footer__social-item a {
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    cursor: url(../../../images/icons/Cursor-hand.svg), pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    line-height: 0;
+    font-size: 0;
+    max-height: 15px;
+    height: 100%; }
+    .footer .footer__social-item a:hover {
+      opacity: 0.5; }
+    .footer .footer__social-item a img {
+      height: 100%;
+      width: auto; }
+  .footer .footer__links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .footer .footer__links a {
+      transition-property: opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      cursor: url(../../../images/icons/Cursor-hand.svg), pointer;
+      text-decoration: none;
+      color: inherit;
+      font-size: 16px;
+      line-height: 16px; }
+      .footer .footer__links a:hover {
+        opacity: 0.5; }
+  .footer .footer__footer {
+    padding-top: 60px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 350;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .footer .footer__footer .footer__link {
+      transition-property: opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      cursor: url(../../../images/icons/Cursor-hand.svg), pointer;
+      text-decoration: none;
+      color: inherit; }
+      .footer .footer__footer .footer__link:hover {
+        opacity: 0.5; }
+
+/*# sourceMappingURL=footer.css.map */

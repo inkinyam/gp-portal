@@ -1,0 +1,4 @@
+.sass-cache
+app
+
+sass --watch app/sass:public/stylesheets

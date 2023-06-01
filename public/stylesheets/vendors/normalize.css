@@ -7,6 +7,17 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+ /* обнуляем все отступы "из коробки" */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+/*убираем "закручивающиеся" в айфонах строки у инпутов*/
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+  appearance:none;
+}
 
  html {
     line-height: 1.15; /* 1 */

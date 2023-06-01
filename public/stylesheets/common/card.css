@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/*основные цвета*/
+.card {
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  text-decoration: none;
+  color: #201E33;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 20px;
+  overflow: hidden; }
+  .card.overdue .card__deadline {
+    color: #EB5757; }
+  .card .card__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 28px;
+    padding: 0;
+    margin: 0; }
+    .card .card__header * {
+      flex-shrink: 0; }
+    .card .card__header .card__label {
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      color: #201E33;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 92px;
+      box-sizing: border-box;
+      padding: 5px 10px;
+      height: 100%;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 16px;
+      background-color: #E6F1FC; }
+    .card .card__header .card__date {
+      transition-property: color;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: #8B8B8B; }
+    .card .card__header .card__filler {
+      border-bottom: 1px solid #E1E1E1;
+      flex-shrink: 1;
+      margin: 0 8px;
+      width: 100%;
+      transition: border 0.3s ease-in-out; }
+  .card .card__title {
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    margin: 18px 0;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    display: -moz-box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical; }
+    .card .card__title a {
+      transition-property: opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      cursor: url(../../../images/icons/Cursor-hand.svg), pointer;
+      text-decoration: none;
+      color: inherit; }
+      .card .card__title a:hover {
+        opacity: 0.5; }
+  .card .card__text {
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    display: -webkit-box;
+    display: -moz-box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical; }
+  .card .card__deadline {
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: auto;
+    color: #201E33; }
+
+.tasks .card:hover .card__label {
+  background-color: #0C5FBA;
+  color: white; }
+.tasks .card:hover .card__title {
+  color: #0C5FBA; }
+.tasks .card:active {
+  background-color: #0C5FBA; }
+  .tasks .card:active .card__label {
+    color: #201E33;
+    background-color: #fff; }
+  .tasks .card:active .card__title {
+    color: #fff; }
+  .tasks .card:active .card__filler {
+    border-bottom: 1px solid #fff; }
+  .tasks .card:active .card__date {
+    color: #fff; }
+  .tasks .card:active .card__deadline {
+    color: #fff !important; }
+
+/*# sourceMappingURL=card.css.map */
