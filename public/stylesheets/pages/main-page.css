@@ -356,8 +356,8 @@
       .birthdays .birthdays__container .birthdays__block .birthdays__element::before {
         position: absolute;
         content: "";
-        width: 140%;
-        height: 100%;
+        width: 180%;
+        height: 120%;
         left: -20%;
         z-index: -1000;
         transition: all ease-in-out 0.5s;
@@ -365,7 +365,7 @@
         display: none;
         top: -75%;
         background-image: radial-gradient(circle, #fc9207 20%, transparent 20%), radial-gradient(circle, transparent 20%, #fc9207 20%, transparent 30%), radial-gradient(circle, #fcdf07 20%, transparent 20%), radial-gradient(circle, #fcdf07 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fc9207 15%, transparent 20%), radial-gradient(circle, #fcdf07 20%, transparent 20%), radial-gradient(circle, #fc9207 20%, transparent 20%), radial-gradient(circle, #fcdf07 20%, transparent 20%), radial-gradient(circle, #fc9207 20%, transparent 20%);
-        background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%; }
+        background-size: 15% 15%, 21% 21%, 20% 20%, 14% 14%, 22% 22%, 15% 15%, 20% 20%, 15% 15%, 24% 24%; }
       .birthdays .birthdays__container .birthdays__block .birthdays__element::after {
         position: absolute;
         content: "";
@@ -378,7 +378,7 @@
         display: none;
         bottom: -75%;
         background-image: radial-gradient(circle, #fc9207 20%, transparent 20%), radial-gradient(circle, #fcdf07 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fcdf07 15%, transparent 20%), radial-gradient(circle, #fcdf07 20%, transparent 20%), radial-gradient(circle, #fc9207 20%, transparent 20%), radial-gradient(circle, #fcdf07 20%, transparent 20%), radial-gradient(circle, #fcdf07 20%, transparent 20%);
-        background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%; }
+        background-size: 15% 15%, 25% 25%, 24% 24%, 25% 25%, 20% 20%, 15% 15%, 25% 25%; }
       .birthdays .birthdays__container .birthdays__block .birthdays__element.animate::before {
         display: block;
         animation: topBubbles ease-in-out 0.75s forwards; }
