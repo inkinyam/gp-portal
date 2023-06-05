@@ -1,0 +1,735 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.section-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  margin: 0 0 30px;
+}
+
+/*раздел ПОПУЛЯРНОЕ*/
+.popular { 
+  
+  .section-title {
+    margin-bottom: 24px;
+  }
+  width: 100%;
+
+  .popular__header {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .popular__edit {
+    @include silly-button;
+    @include silly-link;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../../images/icons/edit.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0;
+    margin: 10px 0 0 10px; 
+  }   
+  
+  .popular__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+  }
+  
+  .popular__item {
+    @include transition(background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $light;
+    border-radius: $radius;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 60px;
+
+    a {
+      @include transition(color);
+      @include silly-link;
+      color: $dark;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    &:hover {
+      background-color: $primary-hover;
+
+      a {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      background-color: $primary;
+
+      a {
+        color: #fff;
+        opacity: 1;
+      }
+    }
+  }
+
+  .popular__popup {
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color: #fff;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: $radius;
+    
+    box-sizing: border-box;
+    padding: 24px 24px 40px;
+    width: 960px;
+    max-width: 90%;
+    height: fit-content;
+    
+
+    &.active {
+      display: flex;
+    }
+
+    .popular__popup-exit {
+      @include cursor;
+      @include transition;
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      padding: 0;
+
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      line-height: 20px;
+
+      &:hover {
+        background-color: darken($color: #E6F1FC, $amount: 3);
+      }
+      &:active {
+        background-color: $primary;
+        color: white;
+      }
+    }
+
+    .popular__popup-list  {
+      display: grid;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 20px;
+      grid-template-columns: repeat(4,1fr);
+
+      .popular__popup-item {
+        @include transition(background-color);
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 20px;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        background-color: $light;
+        border-radius: $radius;
+        min-height: 68px;
+
+        &:hover {
+          background-color: $primary-hover;
+        }
+
+        &.active {
+          background-color: $primary;
+          color: white;
+
+          .popular__popup-button {
+            background-color: white;
+            color: $primary;
+            border: 1px solid $primary;
+            display: flex;
+            z-index: 88;
+
+            &:hover {
+              &::before {
+                width: 20px;
+                height: 20px;
+                content: "x";
+                background-color: #fff;
+                border-radius: 50%;
+                color: $primary;
+                position: absolute;
+                z-index: 89;
+                font-size: 16px;
+                line-height: 19px;
+                border: 1px solid $primary;
+              }
+            }
+          }
+        }
+
+        
+        .popular__popup-button {
+          @include cursor;
+          outline: none;
+          @include transition;
+          position: absolute;
+          right: -2px;
+          top:- 4px;
+          width: 20px;
+          padding: 0;
+          height: 20px;
+          border-radius: 50%;
+          background-color: $primary-hover;
+          border: none;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          font-size: 14px;
+          line-height: 14px;
+
+          &:hover {
+            background-color: darken($color: #E6F1FC, $amount: 10);
+          }
+          &:active {
+            background-color: $primary;
+            color: white;
+          }
+        }
+
+
+      }
+
+    }
+  }
+}
+
+
+/*раздел ВАЖНОЕ*/
+.important {
+  width: 100%;
+
+  .important__bunner {
+    @include transition(background-color);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 5px 300px 5px 40px;
+    align-items: center;
+    background-color: currentColor;
+    height: 100px;
+    border-radius: $radius;
+    border: 2px solid currentColor;
+  }
+
+  .important__bunner:hover {
+    background-color: #fff;
+    
+   
+    .important__text {
+      visibility: hidden;
+      opacity: 0;
+      width: 0;
+    }
+
+    .important__subtext {
+      visibility: visible;
+      opacity: 1;
+      width: auto;
+    }
+  }
+
+  .important__subtext {
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    transition: visibility,opacity  0.3s ease-in-out;
+    color: $dark;
+
+    .title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      margin: 0 0 4px;
+    }
+
+    .subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      margin: 0;
+    }
+  }
+
+  .important__text {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility,opacity  0.3s ease-in-out; 
+  }
+
+  .important__photo {
+    max-height: 200%;
+    align-self: flex-start;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+    right: 0;
+    top: -10px;
+  }
+}
+
+/*раздел ЗАДАЧИ*/
+.tasks {
+  width: 100%;
+
+  .tasks__list {
+    list-style: none;
+    margin: 0;
+    box-sizing: border-box;
+    margin-top: -70px;
+    padding: 50px 0 0 !important;
+  }
+
+  .tasks__item {
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: $radius;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    height: 180px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    .card__title {
+      a {
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    &:first-of-type {
+      margin-left: 7px;
+    }
+
+    a {
+      @include cursor;
+    }
+
+  }
+}
+
+
+/*раздел НОВОСТИ И БАННЕРЫ*/
+.news-and-banners {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 60px;
+}
+
+/*раздел НОВОСТИ*/
+.news {
+  width: 100%;
+
+  .tabs__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .tabs__panel {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+ 
+  .news__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .news__card {
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: $radius;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    padding: 24px;
+    
+    .card__title {
+      margin: 11px 0 18px;
+    }
+
+    &.new {
+      .card__header {
+        width: calc(100% - 30px);
+        padding-left: 30px;
+        position: relative;
+        &::before {
+          left: 0;
+          top: 50%;
+          content: '';
+          background-color: $primary;
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          transform: translate(0, -50%)
+        }
+      }
+    }
+  }
+
+  .news__showall {
+    @include silly-link;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 16px;
+    color: $dark;
+
+    background-color: #fff;
+    border-radius: $radius;
+    border: none;
+    box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.1);
+
+
+    box-sizing: border-box;
+    padding: 10px 25px;
+    width: max-content;
+    margin: 40px auto 0;
+    @include transition;
+
+
+    &:hover {
+      opacity: 1;
+      background-color:$primary-hover;
+    }
+    &:active {
+      background-color: $primary;
+      color: white;
+    }
+  }
+
+}
+
+/*раздел БАННЕРЫ*/
+.banners {
+  max-width: 607px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: fit-content;
+
+  .banner {
+     display: flex;
+    flex-direction: column;
+
+    .section-title {
+      margin-bottom: 20px;
+    }
+
+    a {
+      @include silly-link;
+      display: block;
+      font-size: 0;
+      line-height: 0;
+      width: 100%;
+      height: fit-content;
+    }
+  }
+}
+
+/*раздел ЗАЯВКИ*/
+.statement {
+  width: 100%;
+}
+
+/*раздел ДОКУМЕНТЫ*/
+.docs {
+  width: 100%;
+}
+
+/*раздел ДНИ РОЖДЕНИЯ*/
+.birthdays {
+  width: 100%;
+
+  .birthdays__list {
+    margin: -60px 0 0;
+    padding: 60px 0 0;
+    list-style: none;
+    --f-carousel-slide-width: calc((100% - 80px) /5) !important;
+  }
+
+  .birthdays__item {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 25px 32px;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: $radius;
+    border: 1px solid $light-middle;
+    min-height: 247px;
+
+    &.today {
+      .birthdays__day {
+        color: $error;
+      }
+    }
+  }
+
+  .birthdays__date {
+    font-size: 16px;
+    line-height: 24px;
+    color: $secondary;
+    margin-bottom: 8px;
+  }
+
+  .birthdays__img-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;   
+    align-items: center;
+    margin-bottom: 14px;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      min-height: 100%;
+    }
+  }
+
+  .birthdays__name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .birthdays__day {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $secondary;
+    margin-bottom: 16px;
+  }
+
+  .birthdays__container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+
+    input[type='radio'] {
+      display: none;
+    }
+
+    .birthdays__block {
+
+      .birthdays__element {
+        @include cursor;
+        width: 53px;
+        height: 28px;
+        border-radius: $radius;
+        box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.13);
+        display: flex;
+        flex-direction: row;
+        column-gap: 4px;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+
+
+
+        &::before {
+          position: absolute;
+          content: "";
+          width: 180%;
+          height: 120%;
+          left: -20%;
+          z-index: -1000;
+          transition: all ease-in-out 0.5s;
+          background-repeat: no-repeat;
+
+          display: none;
+          top: -75%;
+          background-image: radial-gradient(circle, #fc9207 20%, transparent 20%),
+            radial-gradient(circle, transparent 20%, #fc9207 20%, transparent 30%),
+            radial-gradient(circle, #fcdf07 20%, transparent 20%),
+            radial-gradient(circle, #fcdf07 20%, transparent 20%),
+            radial-gradient(circle, transparent 10%, #fc9207 15%, transparent 20%),
+            radial-gradient(circle, #fcdf07 20%, transparent 20%),
+            radial-gradient(circle, #fc9207 20%, transparent 20%),
+            radial-gradient(circle, #fcdf07 20%, transparent 20%),
+            radial-gradient(circle, #fc9207 20%, transparent 20%);
+          background-size: 15% 15%, 21% 21%, 20% 20%, 14% 14%, 22% 22%, 15% 15%, 20% 20%,
+            15% 15%, 24% 24%;
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 140%;
+          height: 100%;
+          left: -20%;
+          z-index: -1000;
+          transition: all ease-in-out 0.5s;
+          background-repeat: no-repeat;
+
+          display: none;
+          bottom: -75%;
+          background-image: radial-gradient(circle, #fc9207 20%, transparent 20%),
+            radial-gradient(circle, #fcdf07 20%, transparent 20%),
+            radial-gradient(circle, transparent 10%, #fcdf07 15%, transparent 20%),
+            radial-gradient(circle, #fcdf07 20%, transparent 20%),
+            radial-gradient(circle, #fc9207 20%, transparent 20%),
+            radial-gradient(circle, #fcdf07 20%, transparent 20%),
+            radial-gradient(circle, #fcdf07 20%, transparent 20%);
+          background-size: 15% 15%, 25% 25%, 24% 24%, 25% 25%, 20% 20%, 15% 15%, 25% 25%;
+        }
+
+        &.animate {
+          &::before {
+          display: block;
+          animation: topBubbles ease-in-out 0.75s forwards;
+          }
+
+          &::after {
+            display: block;
+            animation: bottomBubbles ease-in-out 0.75s forwards;
+          }
+        }
+
+  
+        .birthdays__count {
+          font-size: 15px;
+          line-height: 15px;
+        }
+      }
+
+      .birthday__img {
+        width: 17px;
+        height: 17px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      
+      &:nth-of-type(1) {
+        .birthday__img {
+           background-image: url(../../../images/icons/gratz-black.png);
+        }
+
+        .birthdays__input:checked ~.birthdays__element {
+          background-color: #ECE3FF;
+
+          .birthday__img {
+            background-image: url(../../../images/icons/gratz-color.png);
+          }
+        }
+      }
+  
+      &:nth-of-type(2) {
+        .birthday__img {
+          background-image: url(../../../images/icons/smile-black.png);
+        }
+        .birthdays__input:checked ~.birthdays__element {
+          background-color: #FFF6D6;
+
+          .birthday__img {
+            background-image: url(../../../images/icons/smile-color.png);
+          }
+        }
+      }
+  
+      &:nth-of-type(3) {
+        .birthday__img {
+          background-image: url(../../../images/icons/cake-black.png);
+        }
+        .birthdays__input:checked ~.birthdays__element {
+          background-color: #FFEEF6;
+
+          .birthday__img {
+            background-image: url(../../../images/icons/cake-color.png);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}

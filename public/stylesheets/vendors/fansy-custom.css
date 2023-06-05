@@ -1,7 +1,9 @@
 .f-carousel {
   --f-carousel-slide-width: 100%;
   --f-carousel-spacing: 20px !important;
-  --f-carousel-slide-width: calc((100% - 60px) /4) !important; }
+  --f-carousel-slide-width: calc((100% - 60px) /4) !important;
+  margin-top: -50px !important;
+  padding-top: 50px !important; }
 
 .f-carousel__nav .f-button {
   cursor: url(../../../images/icons/Cursor-hand.svg), pointer;

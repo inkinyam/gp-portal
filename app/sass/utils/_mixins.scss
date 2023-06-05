@@ -1,0 +1,29 @@
+@mixin transition($property: all) {
+  transition-property: ($property);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin silly-link {
+  @include transition(opacity);
+  cursor: url(../../../images/icons/Cursor-hand.svg), pointer;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+@mixin silly-button {
+  cursor: url(../../../images/icons/Cursor-hand.svg), pointer;
+  border: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  margin: 0;
+}
+
+@mixin cursor {
+  cursor: url(../../../images/icons/Cursor-hand.svg), pointer;
+}

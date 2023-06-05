@@ -1,0 +1,66 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.grey-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &.f-carousel {
+    display: flex;
+  }
+
+  .grey-cards__item {
+    @include transition;
+    @include cursor;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 27px 24px;
+    background-color: $light;
+    border-radius: $radius;
+    color: $dark;
+    text-decoration: none;
+
+    .grey-cards__img {
+      width: 66px;
+      height: 66px;
+      padding-left: 20px;
+    
+      svg {
+        width: 100%;
+        height: 100%;
+    
+        path{
+          @include transition(fill);
+          fill: $light-middle;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: $primary-hover;
+
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+
+    &:active {
+      color: #fff;
+      background-color: $primary;
+
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
