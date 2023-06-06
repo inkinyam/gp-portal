@@ -83,15 +83,15 @@
           <label for="all-type" class="filter__label">Все</label>
         </li>
         <li class="filter__item">
-          <input type="radio" name="type" id="articles" class="filter__input">
+          <input type="radio" name="type" id="articles" data-id="article" class="filter__input">
           <label for="articles" class="filter__label">Статьи</label>
         </li>
         <li class="filter__item">
-          <input type="radio" name="type" id="courses" class="filter__input">
+          <input type="radio" name="type" id="courses" data-id="course" class="filter__input">
           <label for="courses" class="filter__label">Курсы</label>
         </li>
         <li class="filter__item">
-          <input type="radio" name="type" id="survey" class="filter__input">
+          <input type="radio" name="type" id="survey" data-id="survey" class="filter__input">
           <label for="survey" class="filter__label">Опрос</label>
         </li>
       </ul>
@@ -102,12 +102,16 @@
           <label for="all-status" class="filter__label">Все</label>
         </li>
         <li class="filter__item">
-          <input type="radio" name="status" id="done" class="filter__input" checked>
+          <input type="radio" name="status" id="done" data-status="ready" class="filter__input" checked>
           <label for="done" class="filter__label">Завершено</label>
         </li>
         <li class="filter__item">
-          <input type="radio" name="status" id="process" class="filter__input" checked>
-          <label for="process" class="filter__label">Не изучено</label>
+          <input type="radio" name="status" id="process" data-status="process" class="filter__input" checked>
+          <label for="process" class="filter__label">В процессе</label>
+        </li>
+        <li class="filter__item">
+          <input type="radio" name="status" id="unexplored" data-status="unexplored" class="filter__input" checked>
+          <label for="unexplored" class="filter__label">Не изучено</label>
         </li>
       </ul>
     </aside>
@@ -117,7 +121,7 @@
         <h2 class="section-title">Назначено мне</h2>
 
         <ul class="card__list f-carousel js-carousel" >
-          <li class="card__item f-carousel__slide">
+          <li class="card__item f-carousel__slide" data-id="article" data-status="unexplored">
             <a href="#"  class="card">
               <div class="card__img">
                 <img src="./images/photos/welcome-banner.png" alt="img" >
@@ -133,7 +137,7 @@
             </a>
           </li>
 
-          <li class="card__item f-carousel__slide">
+          <li class="card__item f-carousel__slide"  data-id="article" data-status="unexplored">
             <a href="#"  class="card">
               <div class="card__img">
                 <img src="./images/photos/dms-banner.png" alt="img">
@@ -149,7 +153,7 @@
             </a>
           </li>
 
-          <li class="card__item f-carousel__slide">
+          <li class="card__item f-carousel__slide"  data-id="article" data-status="unexplored">
             <a href="#"  class="card">
               <div class="card__img">
                 <img src="./images/photos/social-distantion-banner.png" alt="img">
@@ -171,7 +175,7 @@
         <h2 class="section-title">Полезные статьи</h2>
 
         <ul class="card__list f-carousel js-carousel" >
-          <li class="card__item f-carousel__slide">
+          <li class="card__item f-carousel__slide"  data-id="article" data-status="unexplored">
             <a href="#"  class="card">
               <div class="card__img">
                 <img src="./images/photos/profsous-banner.png" alt="img">
@@ -187,7 +191,7 @@
             </a>
           </li>
 
-          <li class="card__item f-carousel__slide">
+          <li class="card__item f-carousel__slide"  data-id="article" data-status="ready">
             <a href="#"  class="card readed">
               <div class="card__img">
                 <img src="./images/photos/firstyle-banner.png" alt="img">
@@ -204,7 +208,7 @@
           </li>
 
 
-          <li class="card__item f-carousel__slide">
+          <li class="card__item f-carousel__slide"  data-id="article" data-status="unexplored">
             <a href="#"  class="card">
               <div class="card__img">
                 <img src="./images/photos/workers-banner.png" alt="img">
@@ -221,7 +225,7 @@
           </li>
 
 
-          <li class="card__item f-carousel__slide">
+          <li class="card__item f-carousel__slide"  data-id="course" data-status="process">
             <a href="#"  class="card process">
               <div class="card__img">
                 <img src="./images/photos/social-distantion-banner.png" alt="img">
@@ -237,7 +241,7 @@
             </a>
           </li>
 
-          <li class="card__item f-carousel__slide">
+          <li class="card__item f-carousel__slide"  data-id="article" data-status="unexplored">
             <a href="#"  class="card">
               <div class="card__img">
                 <img src="./images/photos/welcome-banner.png" alt="img" >
@@ -260,7 +264,7 @@
       <section class="courses">
         <h2 class="section-title">Курсы</h2>
         <ul class="card__list f-carousel js-carousel" >
-          <li class="card__item f-carousel__slide">
+          <li class="card__item f-carousel__slide"  data-id="course" data-status="ready">
             <a href="#"  class="card done">
               <div class="card__img">
                 <img src="./images/photos/personal-data-save-banner.png" alt="img">
@@ -276,7 +280,7 @@
             </a>
           </li>
 
-          <li class="card__item f-carousel__slide">
+          <li class="card__item f-carousel__slide"  data-id="course" data-status="process">
             <a href="#"  class="card process">
               <div class="card__img">
                 <img src="./images/photos/work-save-banner.png" alt="img">
