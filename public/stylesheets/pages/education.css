@@ -94,7 +94,7 @@
                 z-index: 2; }
           .education .container .mainpart .card__list .card__item .card .card__img {
             width: 100%;
-            min-width: 100%;
+            min-width: 101%;
             height: 150px;
             max-height: 150px;
             overflow: hidden;
