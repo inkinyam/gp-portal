@@ -28,7 +28,7 @@
       <img src="./images/logo-black.svg" alt="Логотип Института" class="header__logo">
       <ul class="header__list">
         <li class="header__item active">
-          <a href="#" class="header__link">Главная</a>
+          <a href="index.html" class="header__link">Главная</a>
         </li>
         <li class="header__item">
           <a href="#" class="header__link">Заявки</a>
@@ -43,7 +43,7 @@
           <a href="#" class="header__link">Информация</a>
         </li>
         <li class="header__item">
-          <a href="#" class="header__link">Обучение</a>
+          <a href="./education.html" class="header__link">Обучение</a>
         </li>
       </ul>
 
@@ -61,22 +61,7 @@
         <button class="popular__edit" title="редактировать"></button>
       </div>
       
-      <ul class="popular__list">
-<!--         <li class="popular__item">
-            <a href="#">Телефонный справочник</a>
-        </li>
-        <li class="popular__item">
-          <a href="#">Документы и бланки</a>
-        </li>
-        <li class="popular__item">
-          <a href="#">Техническая поддержка</a>
-        </li>
-        <li class="popular__item">
-          <a href="#">МОСЭДО</a>
-        </li>
-        <li class="popular__item">
-          <a href="#">Хоз.обеспечение</a> -->
-        </li>
+      <ul class="popular__list"> </li>
       </ul>
 
       <div class="popular__popup">
@@ -283,7 +268,6 @@
           </ul>  
 
           <div class="tabs__content">
-            <div class="tabs__panel" data-tab-name="all"> </div>
             <div class="tabs__panel" data-tab-name="journal">
               <div class="card news__card new">
                 <div class="card__header">
@@ -299,7 +283,7 @@
             </div>
 
             <div class="tabs__panel" data-tab-name="advent">
-              <div class="card news__card">
+              <div class="card news__card new">
                 <div class="card__header">
                   <span class="card__label">Событие</span>
                   <span class="card__filler"></span>
@@ -328,11 +312,13 @@
               </div>
             </div>
             <div class="tabs__panel" data-tab-name="parts"></div>
+            <div class="tabs__panel" data-tab-name="all"></div>
+
           </div>
-
-        <a href="#" class="news__showall">Все новости</a>
+        </div>
+        
+        <a href="#" class="button__showall">Все новости</a>
       </section>
-
 
       <section class="banners">
         <div class="banner banner_v_big">
@@ -361,7 +347,6 @@
         </div>
       </section>
     </section>
-
     
     <section class="statement">
       <h2 class="section-title">Заявки</h2>
@@ -400,6 +385,8 @@
           </div>
         </a>
       </div>
+
+
     </section>
 
     <section class="docs">
@@ -469,9 +456,11 @@
           </div>
         </a>
       </div>
+
+      <a href="#" class="button__showall">Все документы</a>
     </section>
 
-    <section class="birthdays ">
+    <section class="birthdays">
       <h2 class="section-title">С днем рождения, коллеги!</h2>
 
       <ul class="birthdays__list f-carousel js-carousel">
@@ -707,14 +696,7 @@
           </div>
         </li>
       </ul>
-      <script>
-        function handleBirthdayLabelClick() {
-          confetti({
-            particleCount: 150,
-            spread: 60
-          });
-        }
-      </script>
+      <a href="#" class="button__showall">Все дни рождения</a>
     </section>
   </main>
 
@@ -724,114 +706,42 @@
 
       <img src="./images/logo-white.svg" alt="Логотип Института" class="footer__logo">
 
-      <div class="footer__columns">
-        <div class="footer__column">
-          <div class="footer__column-title"></div>
-          <div class="footer__column-body">
-            <p class="footer__column-text">
-              На портале Института Генплана Москвы собраны наиболее востребованные сервисы, которые помогут тратить минимум времени на формальности и сосредоточиться на своих основных задачах. 
-              Вопросы и предложения можете направлять на почту <a href="mailto:samiantov@genplanmos.ru">samiantov@genplanmos.ru</a> или <a href="mailto:pkarasev@genplanmos.ru">pkarasev@genplanmos.ru</a>
-            </p>
-  
-            <ul class="footer__social-list">
-              <li class="footer__social-item">
-                <a href="https://vk.com/genplanmos">
-                  <img src="./images/icons/vk.png" alt="VKontakte">
-                </a>
-              </li>
-              <li class="footer__social-item">
-                <a href="https://vk.com/genplanmos">
-                  <img src="./images/icons/telegram.png" alt="Telegramm">
-                </a>
-              </li>
-              <li class="footer__social-item">
-                <a href="#">
-                  <img src="./images/icons/rss.png" alt="RSS">
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-  
-        <div class="footer__column">
-          <div class="footer__column-title">
-            <h4 class="footer__title">Заявки</h4>
-          </div>
-          <div class="footer__column-body">
-            <ul class="footer__links">
-              <li class="footer__links-item">
-                <a href="#">Заявка в техподдержку</a>
-              </li>
-              <li class="footer__links-item">
-                <a href="#">Заявка в АХО </a>
-              </li>
-              <li class="footer__links-item">
-                <a href="#">Заявка на пропуск</a>
-              </li>
-              <li class="footer__links-item">
-                <a href="#">Заявка на печать</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-            
-        <div class="footer__column">
-          <div class="footer__column-title">
-            <h4 class="footer__title">Документы</h4>
-          </div>
-          <div class="footer__column-body">
-            <ul class="footer__links">
-              <li class="footer__links-item">
-                <a href="#">Документы отдела кадров</a>
-              </li>
-              <li class="footer__links-item">
-                <a href="#">Правовые документы</a>
-              </li>
-              <li class="footer__links-item">
-                <a href="#">Распоряжения</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-  
-        <div class="footer__column">
-          <div class="footer__column-title">
-            <h4 class="footer__title">Сервисы</h4>
-          </div>
-          <div class="footer__column-body">
-            <ul class="footer__links">
-              <li class="footer__links-item">
-                <a href="#">Телефонный справочник</a>
-              </li>
-              <li class="footer__links-item">
-                <a href="#">Файлообменный сервер</a>
-              </li>
-              <li class="footer__links-item">
-                <a href="#">Почта @str.mos.ru</a>
-              </li>
-              <li class="footer__links-item">
-                <a href="#">Почта @genplan.ru</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <div class="footer__footer">
-        <p class="footer__copyright">
-          2023. Институт Генплана Москвы
-        </p>
-  
-        <a href="https://genplanmos.ru/policypersonaldata/" class="footer__link">Политика конфиденциальности</a>
-      </div>
-
+      <p class="footer__text">
+        На портале Института Генплана Москвы собраны наиболее востребованные сервисы, которые помогут 
+        затрачивать минимум времени на формальности и сосредоточиться на своих основных задачах.
+      </p>
+      <p class="footer__text">
+        По вопросам и предложениям: 
+        <a href="mailto:samiantov@genplanmos.ru ">samiantov@genplanmos.ru</a>
+        <a href="mailto:pkarasev@genplanmos.ru ">pkarasev@genplanmos.ru</a>
+      </p>
+ 
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
+          <a href="https://vk.com/genplanmos">
+            <img src="./images/icons/vk.png" alt="VKontakte">
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a href="https://vk.com/genplanmos">
+            <img src="./images/icons/telegram.png" alt="Telegramm">
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a href="#">
+            <img src="./images/icons/rss.png" alt="RSS">
+          </a>
+        </li>
+      </ul>
     </div>
-
-    
-
-
-
-    
+  
+    <div class="footer__footer">
+      <p class="footer__copyright">
+        2023. Институт Генплана Москвы
+      </p>
+  
+      <a href="https://genplanmos.ru/policypersonaldata/" class="footer__link">Политика конфиденциальности</a>
+    </div>
   </footer>
 
   <template class="popular-service-item">
@@ -847,6 +757,7 @@
     </li>
   </template>
 
+  <script src="./public/scripts/common.js"></script>
   <script src="./public/scripts/main-page.js"></script>
   <script src="./public/scripts/tabs.js">  </script>
   <script src="./public/scripts/popular.js">  </script>

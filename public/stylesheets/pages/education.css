@@ -1,0 +1,155 @@
+@charset "UTF-8";
+/*основные цвета*/
+.education.main {
+  gap: 0; }
+.education .education__lead-img {
+  width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+  object-position: center;
+  margin-bottom: 64px; }
+.education .container {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  column-gap: 64px; }
+  .education .container .filter .section-title {
+    margin-bottom: 20px; }
+  .education .container .filter .filter__type {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0 0 20px;
+    display: block; }
+  .education .container .filter .filter__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .education .container .filter .filter__list:first-of-type {
+      margin-bottom: 50px; }
+    .education .container .filter .filter__list .filter__item .filter__input {
+      display: none; }
+    .education .container .filter .filter__list .filter__item .filter__label {
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      cursor: url(../../../images/icons/Cursor-hand.svg), pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 5px 15px;
+      background-color: #F8F8F8;
+      width: fit-content;
+      border-radius: 20px; }
+      .education .container .filter .filter__list .filter__item .filter__label:hover {
+        background-color: #E6F1FC; }
+    .education .container .filter .filter__list .filter__item .filter__input:checked ~ .filter__label {
+      background-color: #0C5FBA;
+      color: white; }
+  .education .container .mainpart {
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px; }
+    .education .container .mainpart .card__list {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+      .education .container .mainpart .card__list .card__item {
+        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+        border-radius: 20px;
+        background-color: white;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-bottom: 30px; }
+        .education .container .mainpart .card__list .card__item .card {
+          cursor: url(../../../images/icons/Cursor-hand.svg), pointer;
+          padding: 0; }
+          .education .container .mainpart .card__list .card__item .card .card__title {
+            padding: 0 24px;
+            min-height: 40px;
+            font-size: 20px; }
+          .education .container .mainpart .card__list .card__item .card .card__text {
+            padding: 0 24px 24px;
+            font-size: 16px; }
+          .education .container .mainpart .card__list .card__item .card .card__timeline {
+            margin: 0 24px 24px;
+            margin-top: auto;
+            border-bottom: 2px solid #E1E1E1; }
+            .education .container .mainpart .card__list .card__item .card .card__timeline .card__status {
+              margin-bottom: 4px;
+              display: block;
+              font-size: 16px;
+              position: relative; }
+              .education .container .mainpart .card__list .card__item .card .card__timeline .card__status::before {
+                position: absolute;
+                width: 16px;
+                height: 17px;
+                bottom: 2px;
+                right: 50%;
+                transform: translateX(50%);
+                z-index: 2; }
+          .education .container .mainpart .card__list .card__item .card .card__img {
+            width: 100%;
+            min-width: 100%;
+            height: 150px;
+            max-height: 150px;
+            overflow: hidden;
+            background-color: #E1E1E1;
+            max-width: 100%; }
+            .education .container .mainpart .card__list .card__item .card .card__img img {
+              width: 100%;
+              min-height: 100%;
+              height: auto;
+              object-fit: cover;
+              object-position: center; }
+          .education .container .mainpart .card__list .card__item .card:hover .card__title {
+            color: #0C5FBA; }
+          .education .container .mainpart .card__list .card__item .card:active {
+            background-color: #0C5FBA;
+            color: white; }
+            .education .container .mainpart .card__list .card__item .card:active .card__title {
+              color: unset; }
+          .education .container .mainpart .card__list .card__item .card.readed .card__timeline {
+            border-bottom: 2px solid #289940; }
+            .education .container .mainpart .card__list .card__item .card.readed .card__timeline .card__status::before {
+              width: 16px;
+              height: 24px;
+              bottom: -2px;
+              right: 52%;
+              transform: translateX(0);
+              content: url("../../../images/icons/readed.png"); }
+          .education .container .mainpart .card__list .card__item .card.done .card__timeline {
+            border-bottom: 2px solid #289940; }
+            .education .container .mainpart .card__list .card__item .card.done .card__timeline .card__status::before {
+              width: 16px;
+              height: 24px;
+              bottom: -4px;
+              content: url("../../../images/icons/done.png"); }
+          .education .container .mainpart .card__list .card__item .card.process .card__timeline {
+            border-bottom: 2px solid #289940;
+            position: relative; }
+            .education .container .mainpart .card__list .card__item .card.process .card__timeline::after {
+              position: absolute;
+              content: '';
+              width: 50%;
+              height: 2px;
+              bottom: -2px;
+              right: 0;
+              z-index: 2;
+              background-color: #E1E1E1; }
+            .education .container .mainpart .card__list .card__item .card.process .card__timeline::before {
+              position: absolute;
+              content: url("../../../images/icons/finish.png");
+              width: 16px;
+              height: 14px;
+              bottom: 10px;
+              right: 0;
+              z-index: 2; }
+            .education .container .mainpart .card__list .card__item .card.process .card__timeline .card__status::before {
+              content: url("../../../images/icons/runner.png"); }
+
+/*# sourceMappingURL=education.css.map */

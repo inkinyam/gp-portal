@@ -412,40 +412,6 @@
       }
     }
   }
-
-  .news__showall {
-    @include silly-link;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-weight: 400;
-    font-size: 16px;
-    color: $dark;
-
-    background-color: #fff;
-    border-radius: $radius;
-    border: none;
-    box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.1);
-
-
-    box-sizing: border-box;
-    padding: 10px 25px;
-    width: max-content;
-    margin: 40px auto 0;
-    @include transition;
-
-
-    &:hover {
-      opacity: 1;
-      background-color:$primary-hover;
-    }
-    &:active {
-      background-color: $primary;
-      color: white;
-    }
-  }
-
 }
 
 /*раздел БАННЕРЫ*/

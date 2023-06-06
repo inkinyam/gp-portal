@@ -1,0 +1,39 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  width: 100%; 
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: transparent;
+  color: $secondary;
+
+  .breadcrumb__item {
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px 0;
+    a {
+      @include silly-link;
+    }
+
+    &::after {
+      content: '/';
+      position: absolute;
+      right: -13px;
+    }
+
+    &:last-of-type {
+      color: $primary;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

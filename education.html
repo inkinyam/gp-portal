@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="120x120" href="./images/favicons/favicon-120x120.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="./images/favicons/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./images/favicons/favicon-192x192.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="167x167" href="./images/favicons/favicon-167x167.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./images/favicons/favicon-180x180.png">
+
+  <link rel="stylesheet" href="./public/index.css">
+  <link rel="stylesheet" href="./public/stylesheets/pages/education.css">
+
+  <title>Портал - Главная</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+  <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"/>
+</head>
+<body class="page">  
+<!-- HEADER -->
+<header class="header">
+    <div class="header__container">
+      <img src="./images/logo-black.svg" alt="Логотип Института" class="header__logo">
+      <ul class="header__list">
+        <li class="header__item">
+          <a href="./index.html" class="header__link">Главная</a>
+        </li>
+        <li class="header__item">
+          <a href="#" class="header__link">Заявки</a>
+        </li>
+        <li class="header__item">
+          <a href="#" class="header__link">Сервисы</a>
+        </li>
+        <li class="header__item">
+          <a href="#" class="header__link">Документы</a>
+        </li>
+        <li class="header__item">
+          <a href="#" class="header__link">Информация</a>
+        </li>
+        <li class="header__item  active">
+          <a href="./education.html" class="header__link">Обучение</a>
+        </li>
+      </ul>
+
+      <button class="header__search">
+        <img src="./images/icons/search.svg" alt="Поиск">
+      </button>
+    </div>
+</header>
+
+<!-- MAIN -->
+<main class="main education">
+  <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a itemprop="item" href="./index.html"> 
+          <span itemprop="name">Главная</span> 
+        </a>
+        <meta itemprop="position" content="1">
+      </li>
+      <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <span itemprop="item"> 
+          <span itemprop="name">Обучение</span> 
+        </span>
+        <meta itemprop="position" content="2">
+    </li>
+  </ul>
+
+  <img src="./images/photos/education-banner.png" alt="баннер об обучении" class="education__lead-img">
+
+  <div class="container">
+    <aside class="filter">
+      <h2 class="section-title">Фильтр</h2>
+      <span class="filter__type">Тип:</span>
+
+      <ul class="filter__list">
+        <li class="filter__item ">
+          <input type="radio" name="type" id="all-type" class="filter__input" checked>
+          <label for="all-type" class="filter__label">Все</label>
+        </li>
+        <li class="filter__item">
+          <input type="radio" name="type" id="articles" class="filter__input">
+          <label for="articles" class="filter__label">Статьи</label>
+        </li>
+        <li class="filter__item">
+          <input type="radio" name="type" id="courses" class="filter__input">
+          <label for="courses" class="filter__label">Курсы</label>
+        </li>
+        <li class="filter__item">
+          <input type="radio" name="type" id="survey" class="filter__input">
+          <label for="survey" class="filter__label">Опрос</label>
+        </li>
+      </ul>
+      <span class="filter__type">Состояние:</span>
+      <ul class="filter__list">
+        <li class="filter__item ">
+          <input type="radio" name="status" id="all-status" class="filter__input" checked>
+          <label for="all-status" class="filter__label">Все</label>
+        </li>
+        <li class="filter__item">
+          <input type="radio" name="status" id="done" class="filter__input" checked>
+          <label for="done" class="filter__label">Завершено</label>
+        </li>
+        <li class="filter__item">
+          <input type="radio" name="status" id="process" class="filter__input" checked>
+          <label for="process" class="filter__label">Не изучено</label>
+        </li>
+      </ul>
+    </aside>
+
+    <div class="mainpart">
+      <section class="assigned">
+        <h2 class="section-title">Назначено мне</h2>
+
+        <ul class="card__list f-carousel js-carousel" >
+          <li class="card__item f-carousel__slide">
+            <a href="#"  class="card">
+              <div class="card__img">
+                <img src="./images/photos/welcome-banner.png" alt="img" >
+              </div>
+              <h3 class="card__title">Адаптация на новом рабочем месте</h3>
+              <p class="card__text">
+                Твоя памятка-помощница с популярными ответами на вопросы от новенького.               
+              </p>
+
+              <div class="card__timeline">
+                <span class="card__status">Новое</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="card__item f-carousel__slide">
+            <a href="#"  class="card">
+              <div class="card__img">
+                <img src="./images/photos/dms-banner.png" alt="img">
+              </div>
+              <h3 class="card__title">ДМС</h3>
+              <p class="card__text">
+                А что там со стоматологией?              
+              </p>
+
+              <div class="card__timeline">
+                <span class="card__status">Новое</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="card__item f-carousel__slide">
+            <a href="#"  class="card">
+              <div class="card__img">
+                <img src="./images/photos/social-distantion-banner.png" alt="img">
+              </div>
+              <h3 class="card__title">Социальная дистанция</h3>
+              <p class="card__text">
+                Отойди от меня, мне страшно!😖              
+              </p>
+
+              <div class="card__timeline">
+                <span class="card__status">Новое</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="articles">
+        <h2 class="section-title">Полезные статьи</h2>
+
+        <ul class="card__list f-carousel js-carousel" >
+          <li class="card__item f-carousel__slide">
+            <a href="#"  class="card">
+              <div class="card__img">
+                <img src="./images/photos/profsous-banner.png" alt="img">
+              </div>
+              <h3 class="card__title">Профсоюз</h3>
+              <p class="card__text">
+                Чем занимаются члены профсоюза в свобное время от йоги, тренировок и кино...               
+              </p>
+
+              <div class="card__timeline">
+                <span class="card__status">Новое</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="card__item f-carousel__slide">
+            <a href="#"  class="card readed">
+              <div class="card__img">
+                <img src="./images/photos/firstyle-banner.png" alt="img">
+              </div>
+              <h3 class="card__title">Фирменный стиль</h3>
+              <p class="card__text">
+                Рассказываем о том, как по футболке узнать сотрудников генплана из толпы            
+              </p>
+
+              <div class="card__timeline">
+                <span class="card__status">Прочитано</span>
+              </div>
+            </a>
+          </li>
+
+          
+          <li class="card__item f-carousel__slide">
+            <a href="#"  class="card">
+              <div class="card__img">
+                <img src="./images/photos/workers-banner.png" alt="img">
+              </div>
+              <h3 class="card__title">Представление компании на ВКС</h3>
+              <p class="card__text">
+                Следи за собой, представляя Институт на видео-созвонах               
+              </p>
+
+              <div class="card__timeline">
+                <span class="card__status">Новое</span>
+              </div>
+            </a>
+          </li>
+
+
+          <li class="card__item f-carousel__slide">
+            <a href="#"  class="card process">
+              <div class="card__img">
+                <img src="./images/photos/social-distantion-banner.png" alt="img">
+              </div>
+              <h3 class="card__title">Социальная дистанция</h3>
+              <p class="card__text">
+                Отойди от меня, мне страшно!😖              
+              </p>
+
+              <div class="card__timeline">
+                <span class="card__status">В процессе</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="card__item f-carousel__slide">
+            <a href="#"  class="card">
+              <div class="card__img">
+                <img src="./images/photos/welcome-banner.png" alt="img" >
+              </div>
+              <h3 class="card__title">Адаптация на новом рабочем месте</h3>
+              <p class="card__text">
+                Твоя памятка-помощница с популярными ответами на вопросы от новенького           
+              </p>
+
+              <div class="card__timeline">
+                <span class="card__status">Новое</span>
+              </div>
+            </a>
+          </li>
+
+
+        </ul>
+
+      </section>
+
+      <section class="courses">
+        <h2 class="section-title">Курсы</h2>
+        <ul class="card__list f-carousel js-carousel" >
+          <li class="card__item f-carousel__slide">
+            <a href="#"  class="card done">
+              <div class="card__img">
+                <img src="./images/photos/personal-data-save-banner.png" alt="img">
+              </div>
+              <h3 class="card__title">Защита персональных данных</h3>
+              <p class="card__text">
+                Что такое персональные данные и от кого они защищаются?               
+              </p>
+
+              <div class="card__timeline">
+                <span class="card__status">Экзамен сдан</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="card__item f-carousel__slide">
+            <a href="#"  class="card process">
+              <div class="card__img">
+                <img src="./images/photos/work-save-banner.png" alt="img">
+              </div>
+              <h3 class="card__title">Охрана труда</h3>
+              <p class="card__text">
+                На страже ваших прав и здоровья. Различие между охраной труда и техникой...            
+              </p>
+
+              <div class="card__timeline">
+                <span class="card__status">В процессе</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__container">
+
+    <img src="./images/logo-white.svg" alt="Логотип Института" class="footer__logo">
+
+    <p class="footer__text">
+      На портале Института Генплана Москвы собраны наиболее востребованные сервисы, которые помогут 
+      затрачивать минимум времени на формальности и сосредоточиться на своих основных задачах.
+    </p>
+    <p class="footer__text">
+      По вопросам и предложениям: 
+      <a href="mailto:samiantov@genplanmos.ru ">samiantov@genplanmos.ru</a>
+      <a href="mailto:pkarasev@genplanmos.ru ">pkarasev@genplanmos.ru</a>
+    </p>
+    <ul class="footer__social-list">
+      <li class="footer__social-item">
+        <a href="https://vk.com/genplanmos">
+          <img src="./images/icons/vk.png" alt="VKontakte">
+        </a>
+      </li>
+      <li class="footer__social-item">
+        <a href="https://vk.com/genplanmos">
+          <img src="./images/icons/telegram.png" alt="Telegramm">
+        </a>
+      </li>
+      <li class="footer__social-item">
+        <a href="#">
+          <img src="./images/icons/rss.png" alt="RSS">
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="footer__footer">
+    <p class="footer__copyright">
+      2023. Институт Генплана Москвы
+    </p>
+
+    <a href="https://genplanmos.ru/policypersonaldata/" class="footer__link">Политика конфиденциальности</a>
+  </div>
+</footer>
+
+
+<script src="./public/scripts/common.js"></script>
+</body>

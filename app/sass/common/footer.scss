@@ -3,17 +3,19 @@
 
 .footer {
   width: 100%;
-  background-color: $primary;
+  background: linear-gradient(180deg, #E6F1FC 0%, #E6F1FC 100%);
   box-sizing: border-box;
   padding: 100px 0 54px;
-  color: #ffffff;
+  color: $primary;
 
   .footer__container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     max-width: 1312px;
     width: 90%;
     margin: 0 auto;
+    padding-bottom: 40px;
   }
   
   .footer__logo {
@@ -22,59 +24,29 @@
     margin-bottom: 4px;
   }
   
-  .footer__columns {
-    display: flex;
-    flex-direction: row;
-    column-gap: 100px;
-    padding-bottom: 36px;
-    border-bottom: 1px solid $primary-hover;
-  }
-  
-  .footer__column {
-    display: flex;
-    flex-direction: column;
-    max-width: 200px;
-
-    &:first-of-type{
-      max-width: 426px;
-      margin-right: auto;
-    }
-  }
-  
-  
-  .footer__column-title {
-    min-height: 60px;
-  }
-  
-  .footer__title{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 24px;
-  }
-  
-  .footer__column-text {
+ 
+  .footer__text {
     font-style: normal;
     font-weight: 350;
     font-size: 18px;
     line-height: 24px;
+    max-width: 426px;
 
     a {
+      display: block;
       @include silly-link;
       font-weight: 400;
     }
   }
   
-  
-
-  
+    
   .footer__social-list {
     display: flex;
     flex-direction: row;
     column-gap: 10px;
     list-style: none;
     padding: 0;
-    margin: 40px 0 0;
+    margin: 0;
   }
   
   .footer__social-item { 
@@ -93,32 +65,21 @@
     }
   }
   
- 
-  .footer__links {
-    display: flex;
-    flex-direction: column;
-    row-gap: 16px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    a {
-      @include silly-link;
-      font-size: 16px;
-      line-height: 16px;
-    }
-  }
-  
-
   
   .footer__footer {
-    padding-top: 60px;
+    max-width: 1312px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 24px 0 0;
+
     font-size: 16px;
     line-height: 16px;
     font-weight: 350;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    border-top: 1px solid $primary;
 
     .footer__link {
       @include silly-link;

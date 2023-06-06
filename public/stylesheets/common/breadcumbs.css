@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/*основные цвета*/
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: transparent;
+  color: #8B8B8B; }
+  .breadcrumb .breadcrumb__item {
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px 0; }
+    .breadcrumb .breadcrumb__item a {
+      transition-property: opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      cursor: url(../../../images/icons/Cursor-hand.svg), pointer;
+      text-decoration: none;
+      color: inherit; }
+      .breadcrumb .breadcrumb__item a:hover {
+        opacity: 0.5; }
+    .breadcrumb .breadcrumb__item::after {
+      content: '/';
+      position: absolute;
+      right: -13px; }
+    .breadcrumb .breadcrumb__item:last-of-type {
+      color: #0C5FBA; }
+      .breadcrumb .breadcrumb__item:last-of-type::after {
+        display: none; }
+
+/*# sourceMappingURL=breadcumbs.css.map */

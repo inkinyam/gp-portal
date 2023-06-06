@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/*основные цвета*/
+.button__showall {
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  cursor: url(../../../images/icons/Cursor-hand.svg), pointer;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  color: #201E33;
+  background-color: #fff;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 10px 25px;
+  width: max-content;
+  margin: 40px auto 0;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out; }
+  .button__showall:hover {
+    opacity: 0.5; }
+  .button__showall:hover {
+    opacity: 1;
+    background-color: #E6F1FC; }
+  .button__showall:active {
+    background-color: #0C5FBA;
+    color: white; }
+
+/*# sourceMappingURL=showall.css.map */
