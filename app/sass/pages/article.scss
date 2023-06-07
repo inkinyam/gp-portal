@@ -5,13 +5,13 @@
 
   .container {
     display: grid;
-    grid-template-columns: 1fr 355px;
+    grid-template-columns: minmax(355px, 893px) 355px;
     column-gap: 64px;
   }
 
   .mainblock {
-    height: 1800px;
-    background-color: hotpink;
+    display: flex;
+    flex-direction: column;
   }
 
   .contents {
@@ -78,4 +78,196 @@
       }
     }
   }
+
+  .article__lead {
+    display: grid;
+    grid-template-columns: 1fr 164px;
+    grid-template-rows: 40px 40px;
+
+    .article__img {
+      grid-column: span 2;
+    }
+  }
+
+  .article__title-button {
+    @include silly-link;
+    @include transition;
+    grid-column: 2;
+    grid-row: span 2;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    background-color: $primary;
+    color: white;
+    border-radius: $radius;
+
+    &:hover {
+      opacity: 1;
+      background-color: $primary-hover;
+      color: $dark;
+    }
+
+    &:active {
+      background-color: $light;
+      color: $primary;
+    }
+
+  }
+
+  .article__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0;
+  }
+
+  .article__description{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    margin: 0;
+  }
+
+  .article__img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    margin: 20px 0 50px;
+  }
+
+  .article__note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30.5px 45.5px;
+    border-radius: $radius;
+    background-color: $light;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;
+  }
+
+  .article__section {
+    scroll-margin-top: 40px;
+    margin: 70px 0 0;
+
+    .article__title {
+      margin-bottom: 30px;
+    }
+
+    .article__text {
+      margin-bottom: 6px;
+    }
+    iframe {
+      margin-bottom: 20px;
+    }
+  }
+
+  .article__advice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 26px 20px;
+    background-color: $primary-hover;
+    border-radius: $radius;
+    margin: 20px 0;
+
+    .article__advice-text {
+      display: block;
+      position: relative;
+
+      &::before {
+        content: url('../../../images/icons/fire.png');
+        width: 29px;
+        height: 29px;
+        position: absolute;
+        left: -40px;
+        top: -5px;
+        display: block;
+
+      }
+    }
+  }
+
+  .activities__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .activities__item {
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    --f-carousel-slide-width: calc((100% - 40px)/3) !important;
+
+
+    .card {
+      @include silly-link;
+      @include cursor;
+      padding: 0 0 24px 0;
+      
+      &:hover {
+        opacity: 1;
+        .card__title {
+          color: $primary;
+        }
+      }
+
+      &:active {
+        color: white;
+        background-color: $primary;
+        .card__title {
+          color: white;
+        }
+        .card__text {
+          color:white;
+        }
+      }
+    }
+
+    .card__text {
+      font-size: 16px;
+      line-height: 18px;
+      padding: 0 24px;
+    }
+    
+    .card__title {
+      margin: 10px 0;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+    }
+
+    .card__img {
+      max-height: 140px;
+      height: 100%;
+      overflow: hidden;
+          
+      img {
+        width: 100%;
+        height: 140px;
+        height: auto;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
 }

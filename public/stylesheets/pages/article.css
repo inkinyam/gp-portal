@@ -4,11 +4,11 @@
   row-gap: 0; }
   .article.main .container {
     display: grid;
-    grid-template-columns: 1fr 355px;
+    grid-template-columns: minmax(355px, 893px) 355px;
     column-gap: 64px; }
   .article.main .mainblock {
-    height: 1800px;
-    background-color: hotpink; }
+    display: flex;
+    flex-direction: column; }
   .article.main .contents {
     position: sticky;
     top: 70px;
@@ -67,5 +67,157 @@
         background-color: #E6F1FC; }
       .article.main .contents .contents__link:active {
         color: #0C5FBA; }
+  .article.main .article__lead {
+    display: grid;
+    grid-template-columns: 1fr 164px;
+    grid-template-rows: 40px 40px; }
+    .article.main .article__lead .article__img {
+      grid-column: span 2; }
+  .article.main .article__title-button {
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    cursor: url(../../../images/icons/Cursor-hand.svg), pointer;
+    text-decoration: none;
+    color: inherit;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    grid-column: 2;
+    grid-row: span 2;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    background-color: #0C5FBA;
+    color: white;
+    border-radius: 20px; }
+    .article.main .article__title-button:hover {
+      opacity: 0.5; }
+    .article.main .article__title-button:hover {
+      opacity: 1;
+      background-color: #E6F1FC;
+      color: #201E33; }
+    .article.main .article__title-button:active {
+      background-color: #F8F8F8;
+      color: #0C5FBA; }
+  .article.main .article__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0; }
+  .article.main .article__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    margin: 0; }
+  .article.main .article__img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    margin: 20px 0 50px; }
+  .article.main .article__note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30.5px 45.5px;
+    border-radius: 20px;
+    background-color: #F8F8F8;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px; }
+  .article.main .article__section {
+    scroll-margin-top: 40px;
+    margin: 70px 0 0; }
+    .article.main .article__section .article__title {
+      margin-bottom: 30px; }
+    .article.main .article__section .article__text {
+      margin-bottom: 6px; }
+    .article.main .article__section iframe {
+      margin-bottom: 20px; }
+  .article.main .article__advice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 26px 20px;
+    background-color: #E6F1FC;
+    border-radius: 20px;
+    margin: 20px 0; }
+    .article.main .article__advice .article__advice-text {
+      display: block;
+      position: relative; }
+      .article.main .article__advice .article__advice-text::before {
+        content: url("../../../images/icons/fire.png");
+        width: 29px;
+        height: 29px;
+        position: absolute;
+        left: -40px;
+        top: -5px;
+        display: block; }
+  .article.main .activities__list {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .article.main .activities__item {
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    --f-carousel-slide-width: calc((100% - 40px)/3) !important; }
+    .article.main .activities__item .card {
+      transition-property: opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      cursor: url(../../../images/icons/Cursor-hand.svg), pointer;
+      text-decoration: none;
+      color: inherit;
+      cursor: url(../../../images/icons/Cursor-hand.svg), pointer;
+      padding: 0 0 24px 0; }
+      .article.main .activities__item .card:hover {
+        opacity: 0.5; }
+      .article.main .activities__item .card:hover {
+        opacity: 1; }
+        .article.main .activities__item .card:hover .card__title {
+          color: #0C5FBA; }
+      .article.main .activities__item .card:active {
+        color: white;
+        background-color: #0C5FBA; }
+        .article.main .activities__item .card:active .card__title {
+          color: white; }
+        .article.main .activities__item .card:active .card__text {
+          color: white; }
+    .article.main .activities__item .card__text {
+      font-size: 16px;
+      line-height: 18px;
+      padding: 0 24px; }
+    .article.main .activities__item .card__title {
+      margin: 10px 0;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 0 24px; }
+    .article.main .activities__item .card__img {
+      max-height: 140px;
+      height: 100%;
+      overflow: hidden; }
+      .article.main .activities__item .card__img img {
+        width: 100%;
+        height: 140px;
+        height: auto;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center; }
 
 /*# sourceMappingURL=article.css.map */
