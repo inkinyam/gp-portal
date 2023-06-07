@@ -1,5 +1,4 @@
 @import '../utils/mixins';
-@import '../utils/variables';
 
 .card {
   @include transition(background-color);

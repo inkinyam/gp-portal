@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/*основные цвета*/
 .f-carousel {
   --f-carousel-slide-width: 100%;
   --f-carousel-spacing: 20px !important;
